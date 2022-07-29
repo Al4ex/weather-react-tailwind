@@ -42,11 +42,18 @@ const ClimaProvider = ({children}) =>{
             
         } catch (error) {
             setError("No se encontro ninguna ciudad")
+            setLoading(false)
+            setResult({})
             console.log(error)
         }
     }
     const handleSubmit = e => {
         e.preventDefault()
+        if (ciudad== '') {
+            setError("Coloca una ciudad")
+            setResult({})
+            return
+        }
         consultarClima(ciudad)
     }
     return(

@@ -15,13 +15,13 @@ const All = () => {
     useClima();
 
   return (
-    <div className="bg-gray-600 h-screen">
+    <div className="bg-gray-600 h-screen overflow-hidden">
       <div className="bg-black">
         <h2 className="text-white text-center text-2xl py-3 font-thin">
           Obtener el clima
         </h2>
       </div>
-      <div className=" w-3/4 md:w-1/2 mx-auto mt-10">
+      <div className=" w-3/4 md:w-1/2 mx-auto flex flex-col justify-center content-center h-full md:mt-0 md:h-4/5">
         <form action="" onSubmit={handleSubmit} className="flex shadow-lg">
           <input
             type="text"
@@ -40,16 +40,16 @@ const All = () => {
         {Object.keys(result).length > 0 ? (
           loading ? (
             <div className="flex justify-center items-center content-center h-96 ">
-              <div class="sk-grid">
-                <div class="sk-grid-cube"></div>
-                <div class="sk-grid-cube"></div>
-                <div class="sk-grid-cube"></div>
-                <div class="sk-grid-cube"></div>
-                <div class="sk-grid-cube"></div>
-                <div class="sk-grid-cube"></div>
-                <div class="sk-grid-cube"></div>
-                <div class="sk-grid-cube"></div>
-                <div class="sk-grid-cube"></div>
+              <div className="sk-grid">
+                <div className="sk-grid-cube"></div>
+                <div className="sk-grid-cube"></div>
+                <div className="sk-grid-cube"></div>
+                <div className="sk-grid-cube"></div>
+                <div className="sk-grid-cube"></div>
+                <div className="sk-grid-cube"></div>
+                <div className="sk-grid-cube"></div>
+                <div className="sk-grid-cube"></div>
+                <div className="sk-grid-cube"></div>
               </div>
             </div>
           ) : (
@@ -101,7 +101,7 @@ const All = () => {
 
             <button
               type="button"
-              class="btn-close box-content w-4 h-4 p-1 ml-auto text-yellow-900 border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-yellow-900 hover:opacity-75 hover:no-underline"
+              className="btn-close box-content w-4 h-4 p-1 ml-auto text-yellow-900 border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-yellow-900 hover:opacity-75 hover:no-underline"
               data-bs-dismiss="alert"
               aria-label="Close"
             ></button>
