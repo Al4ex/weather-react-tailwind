@@ -21,7 +21,7 @@ const All = () => {
           Obtener el clima
         </h2>
       </div>
-      <div className="w-1/2 mx-auto mt-10">
+      <div className=" w-3/4 md:w-1/2 mx-auto mt-10">
         <form action="" onSubmit={handleSubmit} className="flex shadow-lg">
           <input
             type="text"
@@ -53,7 +53,7 @@ const All = () => {
               </div>
             </div>
           ) : (
-            <div className="mt-5 block md:flex bg-gray-700 w-full md:h-96 rounded-lg overflow-hidden shadow-2xl">
+            <div className="mt-5 block md:flex bg-gray-700 w-full h-3/4 md:h-96 rounded-lg overflow-hidden shadow-2xl">
               <CurrentWeather />
               <div className="md:w-2/3 flex flex-col">
                 <div className="border-b border-gray-400 h-1/2 p-4">
