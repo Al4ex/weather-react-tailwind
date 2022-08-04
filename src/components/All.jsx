@@ -21,7 +21,7 @@ const All = () => {
           Obtener el clima
         </h2>
       </div>
-      <div className=" w-3/4 md:w-1/2 mx-auto flex flex-col justify-center content-center h-full md:mt-0 md:h-4/5">
+      <div className=" w-3/4 md:w-1/2 mx-auto flex flex-col mt-8 md:justify-center content-center h-full md:mt-0 md:h-4/5">
         <form action="" onSubmit={handleSubmit} className="flex shadow-lg">
           <input
             type="text"
@@ -53,7 +53,7 @@ const All = () => {
               </div>
             </div>
           ) : (
-            <div className="mt-5 block md:flex bg-gray-700 w-full h-3/4 md:h-96 rounded-lg overflow-hidden shadow-2xl">
+            <div className="mt-5 block md:flex bg-gray-700 w-full justify-between md:h-96 rounded-lg overflow-hidden shadow-2xl">
               <CurrentWeather />
               <div className="md:w-2/3 flex flex-col">
                 <div className="border-b border-gray-400 h-1/2 p-4">
@@ -74,7 +74,7 @@ const All = () => {
                     <span>{(result.wind.speed * 3.6).toFixed()} k/h</span>
                   </p>
                 </div>
-                <div className="m-6 pb-4  flex overflow-auto scrollbar scrollbar-hidden hover:scrollbar-auto">
+                <div className="mx-6 md:my-6 box-border md:pb-4  flex overflow-auto scrollbar scrollbar-hidden hover:scrollbar-auto">
                   {forecast.map((weather) => (
                     <PredictionCard
                       key={weather.dt_txt}
